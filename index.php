@@ -1,6 +1,6 @@
 <?php
 
-  include __DIR__ . '/php-partials/database.php' 
+  include __DIR__ . '/php-partials/database.php'
 
 ?>
 
@@ -49,76 +49,15 @@
         <h2>Novità per te</h2>
 
         <div class="album-container">
-          <!-- item 1 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 2 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 3 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 4 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 5 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 6 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 7 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 8 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 9 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
-          <!-- item 10 -->
-          <div class="item">
-            <img src="img/1.jpg" alt="">
-            <h3>California</h3>
-            <h4>B3N</h4>
-            <small>12,99</small>
-          </div>
+
+          <?php foreach ($arrayDischi as $item) { ?>
+            <div class="item">
+              <img src="img/<?php echo $item['imgUrl']; ?>" alt="">
+              <h3><?php echo $item['album']; ?></h3>
+              <h4><?php echo $item['autore']; ?></h4>
+              <small>€ <?php echo $item['prezzo']; ?></small>
+            </div>
+          <?php } ?>
 
         </div>
 
