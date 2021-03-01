@@ -123,9 +123,10 @@ main .container h2 {
 .album-container .item img {
   width: 150px;
   cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .album-container .item img:hover {
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 12px black;
 }
 .album-container .item h3 {
   cursor: pointer;

@@ -27,8 +27,9 @@ main {
     img {
       width: 150px;
       cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, .6);
       &:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 12px rgba(0, 0, 0, 1);
       }
     }
     h3 {
