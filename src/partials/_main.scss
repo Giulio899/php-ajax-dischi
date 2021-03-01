@@ -1,0 +1,46 @@
+main {
+  height: calc(100vh - 30px);
+  background-color: $backgroundMain;
+  padding: 20px 0;
+  .container {
+    height: 100%;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.section-container {
+  height: 100%;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.album-container {
+  @include flex();
+  flex-wrap: wrap;
+  .item {
+    flex-basis: calc(100% / 5);
+    margin-bottom: 30px;
+    img {
+      width: 150px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+      }
+    }
+    h3 {
+      cursor: pointer;
+    }
+    h4 {
+      font-style: oblique;
+      cursor: pointer;
+    }
+    small {
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
