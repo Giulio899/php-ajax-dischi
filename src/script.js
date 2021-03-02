@@ -7,16 +7,15 @@ var app = new Vue({
   },
   mounted() {
     axios
-      .get("http://localhost/77-01.03.2021/php-ajax-dischi/api-album.php")
-        .then((result) => {
-          this.arrayDischi = result.data;
+      .get("/../77-01.03.2021/php-ajax-dischi/api-album.php")
+      .then((result) => {
+        this.arrayDischi = result.data;
 
-
-          result.data.forEach((item) => {
-            if(!this.generi.includes(item.genere)) {
-              this.generi.push(item.genere);
-            }
-          });
-      });
+        result.data.forEach((item) => {
+          if(!this.generi.includes(item.genere)) {
+            this.generi.push(item.genere);
+          }
+        });
+    });
   }
 });
