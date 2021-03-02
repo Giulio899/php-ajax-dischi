@@ -1,0 +1,24 @@
+footer {
+  height: 45px;
+  padding: 0 40px;
+  background-color: $backgroundFooter;
+  ul {
+    height: 100%;
+    @include flex(flex-start, center);
+    li {
+      height: 100%;
+      flex-basis: 20%;
+      img {
+        height: 110%;
+      }
+      a {
+        line-height: 50px;
+        color: $colorPrice;
+        text-transform: uppercase;
+        font-weight: 500;
+        position: relative;
+        top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CDN Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+  <!-- CDN Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Dischi musicali</title>
+</head>
+<body>
+
+  <div id="app">
+    <header>
+      <nav class="left">
+        <ul>
+          <li><a href="#">Social</a></li>
+          <li><a href="#">Negozi</a></li>
+          <li><a href="#">Eventi</a></li>
+          <li><a href="#">Volantino</a></li>
+          <li><a href="#">Libri</a></li>
+          <li><a href="#">Laeffe</a></li>
+          <li><a href="#">Dischi</a></li>
+        </ul>
+      </nav>
+      <nav class="right">
+        <ul>
+          <li><a href="#">App</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Registrati</a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="section-container">
+          <h2>Novità per te</h2>
+
+          <div class="album-container">
+
+            <div class="item" v-for="item in arrayDischi">
+              <img :src="'img/' + item.imgUrl" :alt="item.album">
+              <h3>{{ item.album }}</h3>
+              <h4>{{ item.autore }}</h4>
+              <small>{{ item.prezzo }}</small>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="#"><img src="img/feltrinelli.png" alt="Feltrinelli">
+          </a>
+        </li>
+        <li><a href="#">Negozi</a></li>
+        <li><a href="#">Servizi</a></li>
+        <li><a href="#">Area Clienti</a></li>
+        <li><a href="#">Siti del Gruppo</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>

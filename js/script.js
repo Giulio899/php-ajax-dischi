@@ -7,7 +7,19 @@
   \***********************/
 /***/ (() => {
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    arrayDischi: []
+  },
+  mounted: function mounted() {
+    var _this = this;
 
+    axios.get("http://localhost/77-01.03.2021/php-ajax-dischi/api-album.php").then(function (result) {
+      _this.arrayDischi = result.data; // console.log(this.arrayDischi);
+    });
+  }
+});
 
 /***/ }),
 
