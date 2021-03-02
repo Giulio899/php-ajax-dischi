@@ -1,0 +1,23 @@
+.search {
+  @include flex();
+  margin-bottom: 20px;
+  label, select {
+    position: relative;
+    top: 7px;
+  }
+  .select {
+    flex-grow: 1;
+    text-align: right;
+    label {
+      font-weight: 600;
+      margin-right: 15px;
+    }
+    select {
+      width: 100px;
+      padding: 5px 10px;
+      border: 1px solid #b0b0b0;
+      outline: none;
+      border-radius: 5px;
+    }
+  }
+}

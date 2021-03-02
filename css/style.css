@@ -29,6 +29,9 @@ h4 {
   font-size: 0.8em;
   font-weight: 400;
 }
+h4 span {
+  font-style: normal;
+}
 
 small {
   font-weight: 600;
@@ -38,6 +41,32 @@ small {
   width: 80%;
   min-width: 900px;
   margin: 0 auto;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.search label, .search select {
+  position: relative;
+  top: 7px;
+}
+.search .select {
+  flex-grow: 1;
+  text-align: right;
+}
+.search .select label {
+  font-weight: 600;
+  margin-right: 15px;
+}
+.search .select select {
+  width: 100px;
+  padding: 5px 10px;
+  border: 1px solid #b0b0b0;
+  outline: none;
+  border-radius: 5px;
 }
 
 header {

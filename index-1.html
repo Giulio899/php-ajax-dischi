@@ -40,14 +40,22 @@
     <main>
       <div class="container">
         <div class="section-container">
-          <h2>Novità per te</h2>
+          <div class="search">
+            <h2>Novità per te</h2>
+            <div class="select">
+              <label>Filtra per generi:</label>
+              <select v-model="genereSelezionato">
+                <option v-for="item in generi" :value="item">{{ item }}</option>
+              </select>
+            </div>
+          </div>
 
           <div class="album-container">
 
-            <div class="item" v-for="item in arrayDischi">
+            <div class="item" v-for="item in arrayDischi" v-if="genereSelezionato == 'All' || item.genere == genereSelezionato">
               <img :src="'img/' + item.imgUrl" :alt="item.album">
               <h3>{{ item.album }}</h3>
-              <h4>{{ item.autore }}</h4>
+              <h4>{{ item.autore }} - <span>{{ item.genere }}</span></h4>
               <small>{{ item.prezzo }}</small>
             </div>
 

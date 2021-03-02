@@ -1,14 +1,22 @@
 var app = new Vue({
   el: '#app',
   data: {
-    arrayDischi: []
+    arrayDischi: [],
+    generi: ['All'],
+    genereSelezionato: 'All'
   },
   mounted() {
     axios
       .get("http://localhost/77-01.03.2021/php-ajax-dischi/api-album.php")
         .then((result) => {
           this.arrayDischi = result.data;
-          // console.log(this.arrayDischi);
+
+
+          result.data.forEach((item) => {
+            if(!this.generi.includes(item.genere)) {
+              this.generi.push(item.genere);
+            }
+          });
       });
   }
 });
