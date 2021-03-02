@@ -19,7 +19,8 @@ var app = new Vue({
 
     axios.get("/../77-01.03.2021/php-ajax-dischi/api-album.php").then(function (result) {
       _this.arrayDischi = result.data;
-      result.data.forEach(function (item) {
+
+      _this.arrayDischi.forEach(function (item) {
         if (!_this.generi.includes(item.genere)) {
           _this.generi.push(item.genere);
         }

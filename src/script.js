@@ -11,7 +11,7 @@ var app = new Vue({
       .then((result) => {
         this.arrayDischi = result.data;
 
-        result.data.forEach((item) => {
+        this.arrayDischi.forEach((item) => {
           if(!this.generi.includes(item.genere)) {
             this.generi.push(item.genere);
           }
