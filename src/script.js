@@ -7,7 +7,7 @@ var app = new Vue({
   },
   mounted() {
     axios
-      .get("/../77-01.03.2021/php-ajax-dischi/api-album.php")
+      .get("api-album.php")
       .then((result) => {
         this.arrayDischi = result.data;
 

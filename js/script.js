@@ -17,7 +17,7 @@ var app = new Vue({
   mounted: function mounted() {
     var _this = this;
 
-    axios.get("/../77-01.03.2021/php-ajax-dischi/api-album.php").then(function (result) {
+    axios.get("api-album.php").then(function (result) {
       _this.arrayDischi = result.data;
 
       _this.arrayDischi.forEach(function (item) {
